@@ -1,10 +1,14 @@
-import './App.css'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-function App() {
+import { fetchRequest } from '@store/currency-config';
 
-  return (
-   <div></div>
-  )
+export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRequest());
+  }, []);
+
+  return <div></div>;
 }
-
-export default App
