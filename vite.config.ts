@@ -16,6 +16,5 @@ export default defineConfig({
       },
     },
   },
-  base: "https://elvn5.github.io/crypto/",
   plugins: [react(), tsconfigPaths()],
 })
