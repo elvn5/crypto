@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://user26614.requestly.tech/test/:path*"
+      "destination": "https://user26614.requestly.tech/test/api/:path*"
     }
   ]
 }
