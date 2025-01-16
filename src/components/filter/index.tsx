@@ -54,7 +54,10 @@ function Filter<T>(props: FilterProps<T>) {
     <div>
       <Input onChange={onChangeSearch} value={filterState.search} />
       <Typography.Text>Sort (asc/desc)</Typography.Text>{' '}
-      <Checkbox onChange={onChangeOrder} value={filterState.order === 'asc'} />
+      <Checkbox
+        onChange={onChangeOrder}
+        checked={filterState.order === 'asc'}
+      />
       {isLoading && (
         <div className='spin'>
           <Spin size='large' />

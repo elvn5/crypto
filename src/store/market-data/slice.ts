@@ -31,7 +31,6 @@ const marketData = createSlice({
         state.refresh = true
         },
         refreshData: (state, action)  => {
-        state.data = [];
         state.data = action.payload;
         }
     }
