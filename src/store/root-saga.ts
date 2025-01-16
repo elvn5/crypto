@@ -5,7 +5,7 @@ import { watchMarketDataSaga } from "./market-data/saga";
 function* rootSaga() {
     yield all([
         watchCurrencySaga(),
-        watchMarketDataSaga()
+        watchMarketDataSaga(),
     ])
   }
 

@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const change = z.object({
     direction: z.string(),
-    percen: z.string(),
+    percent: z.string(),
     amount: z.string(),
 })
 
@@ -25,14 +25,12 @@ const volume = z.object({
 
 const priceHistory = z.array(z.string())
 
-const marketData = z.array(
-    z.object({
-        pair: pair,
-        price: price,
-        volume: volume,
-        priceHistory: priceHistory,
-    })
-)
+const marketData =  z.object({
+    pair: pair,
+    price: price,
+    volume: volume,
+    priceHistory: priceHistory,
+})
 
 export {
     marketData

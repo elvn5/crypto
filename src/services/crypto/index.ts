@@ -9,7 +9,6 @@ async function fetchCurrency(): Promise<Currency[]> {
       return response.data;
 
     } catch(e) {
-        console.log(e)
         console.debug(e);
         return [];
     }
@@ -17,11 +16,7 @@ async function fetchCurrency(): Promise<Currency[]> {
 
 async function fetchMarketData(): Promise<MarketData[]> {
     try{
-        const response = await axiosInstance.get("/market", {
-            params: {
-                username:"user26614",
-            }
-        });
+        const response = await axiosInstance.get("/market");
 
         return response.data;
 

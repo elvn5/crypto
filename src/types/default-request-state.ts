@@ -1,7 +1,8 @@
 type DefaultRequestState<T> = {
     data: null | T,
-    error: string | null,
+    error: boolean,
     isLoading: boolean,
+    refresh: boolean,
 }
 
 export type {

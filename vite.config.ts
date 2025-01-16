@@ -2,15 +2,17 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-
-// https://vite.dev/config/
 export default defineConfig({
   server: {
     proxy: {
+      // Matches requests that start with '/api'
       '/api': {
-        target: 'https://requestly.tech/api/mockv2/test/api',
+        // Target URL for the proxy
+        target: 'https://user26614.requestly.tech/test',
+        // Change origin to match the target server
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        // Allow insecure connections for development
+        secure: false,
       },
     },
   },

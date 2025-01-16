@@ -1,3 +1,24 @@
 @use 'base';
+@use 'normalize';
 @use 'layout';
 @use 'typography';
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 0;
+}
+
+.currency__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.market__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
